@@ -1,0 +1,41 @@
+---
+title: Косметика
+description: Персонализация внешнего вида - косметика, редкости, магазин
+icon: Shirt
+---
+
+<div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem', marginBottom: '0.5rem'}}>
+  <img src="/mech/1.png" alt="Косметика" style={{width: '234px', height: '458px', objectFit: 'cover', borderRadius: '4px', display: 'block'}} />
+  <img src="/mech/2.png" alt="Косметика" style={{width: '234px', height: '458px', objectFit: 'cover', borderRadius: '4px', display: 'block'}} />
+  <img src="/mech/3.png" alt="Косметика" style={{width: '234px', height: '458px', objectFit: 'cover', borderRadius: '4px', display: 'block'}} />
+  <img src="/mech/4.png" alt="Косметика" style={{width: '234px', height: '458px', objectFit: 'cover', borderRadius: '4px', display: 'block'}} />
+</div>
+
+У игроков нашего проекта есть возможность преобразить себя с помощью **кастомной персонализации**!
+
+## Как получить косметику?
+
+- На событиях, периодически происходящих на сервере, можно получить **эксклюзивную косметику**
+- Косметику можно приобрести за **WellCoin** во внутриигровом магазине
+
+## Меню взаимодействия
+
+Для того, чтобы открыть магазин косметики, нужно прописать команду `/cosmetic`.
+
+<div style={{marginBottom: '1rem'}}>
+  <img src="/mech/cosm.png" alt="Меню магазина косметики" style={{maxWidth: '450px', width: '100%', borderRadius: '4px', display: 'block'}} />
+</div>
+
+Нажав на кнопку "Магазин", вы попадёте в меню для покупки персонализации. От редкости украшения зависит его стоимость:
+
+| Редкость | Стоимость |
+| --- | --- |
+| <span style={{color: '#9AA5B1'}}>★☆☆☆☆</span> | 5 WellCoin |
+| <span style={{color: '#4A9EDB'}}>★★☆☆☆</span> | 10 WellCoin |
+| <span style={{color: '#4CAF50'}}>★★★☆☆</span> | 15 WellCoin |
+| <span style={{color: '#B57EDC'}}>★★★★☆</span> | 25 WellCoin |
+| <span style={{color: '#FFD700'}}>★★★★★</span> | 40 WellCoin или Эксклюзивная |
+
+<Callout type="info">
+**Эксклюзивную** косметику можно получить на определённых событиях.
+</Callout>
