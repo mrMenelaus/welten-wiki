@@ -32,7 +32,7 @@ jobs:
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
-          password: ${{ secrets.SSH_KEY }}
+          password: ${{ secrets.SSH_PASSWORD }}
           source: site.tar.gz
           target: /tmp
 
@@ -41,11 +41,13 @@ jobs:
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
-          password: ${{ secrets.SSH_KEY }}
+          password: ${{ secrets.SSH_PASSWORD }}
           script: |
-            mkdir -p ~/wiki
+            sudo mkdir -p /var/www/wiki
 
-            rm -rf ~/wiki/*
-            tar -xzf /tmp/site.tar.gz -C ~/wiki
+            sudo rm -rf /var/www/wiki/*
+            sudo tar -xzf /tmp/site.tar.gz -C /var/www/wiki
 
             rm /tmp/site.tar.gz
+
+            sudo systemctl reload nginx
